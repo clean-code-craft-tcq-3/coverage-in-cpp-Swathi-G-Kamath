@@ -1,6 +1,10 @@
 #include "typewise-alert.h"
 #include <stdio.h>
 
+int coolingLowerLimits[]={0,0,0};
+int coolingUpperLimits[]={30,45,40};
+const char *breachTypeMessage[]={"Temperature is Normal","Temperature is too low","Temperature is too high"};
+
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) 
 {
   Breachtype breachType=NORMAL;
