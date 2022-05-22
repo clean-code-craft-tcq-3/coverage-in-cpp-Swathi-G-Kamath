@@ -33,3 +33,10 @@ TEST_CASE("Alerter")
   batteryChar.coolingType=PASSIVE_COOLING;
   REQUIRE(checkAndAlert(TO_EMAIL,batteryChar,50,"abc@xyz.com") == true);
 }
+
+TEST_CASE("Email alaert")
+{
+  REQUIRE(sendToEmail(NORMAL,"abc.xyz.in") == true);
+  REQUIRE(sendToEmail(TOO_LOW,"abc.xyz.in") == true);
+  REQUIRE(sendToEmail(TOO_HIGH,"abc.xyz.in") == true);
+}
