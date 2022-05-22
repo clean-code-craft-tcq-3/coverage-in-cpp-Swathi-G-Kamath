@@ -29,7 +29,7 @@ TEST_CASE("Classify the temperature breach based on cooling type")
 
 TEST_CASE("Alerter")
 {
-  BreachType breachType;
+  CoolingType coolingtype;
   breachType.coolingType=PASSIVE_COOLING;
-  REQUIRE(checkAndAlert(TO_EMAIL,"New",50,"abc@xyz.com") == "Temperature is too high");
+  REQUIRE(checkAndAlert(TO_EMAIL,50,"abc@xyz.com") == true);
 }
