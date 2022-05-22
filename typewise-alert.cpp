@@ -40,7 +40,7 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
 bool checkAndAlert(AlertTarget alertTarget,BatteryCharacter batteryChar, double temperatureInC,const char *recepient) 
 {
     BreachType breachType = classifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
-    bool response=FALSE;
+    bool response=false;
     switch(alertTarget) {
     case TO_CONTROLLER:
       response=sendToController(breachType);
