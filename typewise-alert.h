@@ -32,7 +32,7 @@ typedef struct {
 } BatteryCharacter;
 
 bool checkAndAlert(
-  AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
+  AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC,const char *recepient);
 
 bool sendToController(BreachType breachType);
 bool sendToEmail(BreachType breachType, const char *recepient);
