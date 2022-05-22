@@ -37,7 +37,7 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
 }
 
-void checkAndAlert(AlertTarget alertTarget, double temperatureInC,const char *recepient) 
+void checkAndAlert(AlertTarget alertTarget,BatteryCharacter batteryChar, double temperatureInC,const char *recepient) 
 {
     BreachType breachType = classifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
     switch(alertTarget) {
