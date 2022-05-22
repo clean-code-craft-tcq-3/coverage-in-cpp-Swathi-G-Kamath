@@ -56,9 +56,10 @@ void sendToController(BreachType breachType)
   printf("%x : %x\n", header, breachType);
 }
 
-void sendToEmail(BreachType breachType, const char *recepient) 
+int sendToEmail(BreachType breachType, const char *recepient) 
 {
   std::cout<<"To: "<<recepient<<breachTypeMessage[breachType];
+  return true;
 }
 
 
