@@ -40,20 +40,23 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
 void checkAndAlert(AlertTarget alertTarget,BatteryCharacter batteryChar, double temperatureInC,const char *recepient) 
 {
     BreachType breachType = classifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
+    bool response=FALSE;;
     switch(alertTarget) {
     case TO_CONTROLLER:
-      sendToController(breachType);
+      response=sendToController(breachType);
       break;
     case TO_EMAIL:
-      sendToEmail(breachType,recepient);
+      response=sendToEmail(breachType,recepient);
       break;
   }
+  return response;
 }
 
 void sendToController(BreachType breachType) 
 {
   const unsigned short header = 0xfeed;
   printf("%x : %x\n", header, breachType);
+  return true;
 }
 
 int sendToEmail(BreachType breachType, const char *recepient) 
