@@ -52,14 +52,14 @@ void checkAndAlert(AlertTarget alertTarget,BatteryCharacter batteryChar, double 
   return response;
 }
 
-void sendToController(BreachType breachType) 
+bool sendToController(BreachType breachType) 
 {
   const unsigned short header = 0xfeed;
   printf("%x : %x\n", header, breachType);
   return true;
 }
 
-int sendToEmail(BreachType breachType, const char *recepient) 
+bool sendToEmail(BreachType breachType, const char *recepient) 
 {
   std::cout<<"To: "<<recepient<<breachTypeMessage[breachType];
   return true;
