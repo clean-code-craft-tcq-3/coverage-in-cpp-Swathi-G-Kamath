@@ -29,7 +29,7 @@ TEST_CASE("Classify the temperature breach based on cooling type")
 
 TEST_CASE("Alerter")
 {
-  CoolingType ct;
-  ct.coolingType=PASSIVE_COOLING;
-  REQUIRE(checkAndAlert(TO_EMAIL,50,"abc@xyz.com") == true);
+  BatteryCharacter batteryChar;
+  batteryChar.coolingType=PASSIVE_COOLING;
+  REQUIRE(checkAndAlert(TO_EMAIL,batteryChar,50,"abc@xyz.com") == true);
 }
