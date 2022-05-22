@@ -6,7 +6,7 @@ typedef enum {
   MED_ACTIVE_COOLING
 } CoolingType;
 
-int coolingLowerLimits[]={0,0,0};
+
 
 typedef enum {
   NORMAL,
@@ -14,9 +14,9 @@ typedef enum {
   TOO_HIGH
 } BreachType;
 
-const char *breachTypeMessage[]={"Temperature is Normal","Temperature is too low","Temperature is too high"};
 
-int coolingUpperLimits[]={30,45,40};
+
+
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit);
 BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC);
