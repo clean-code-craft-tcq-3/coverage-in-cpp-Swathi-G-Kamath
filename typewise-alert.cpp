@@ -49,7 +49,8 @@ void checkAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double
   }
 }
 
-void sendToController(BreachType breachType) {
+void sendToController(BreachType breachType) 
+{
   const unsigned short header = 0xfeed;
   printf("%x : %x\n", header, breachType);
 }
@@ -59,4 +60,4 @@ void sendToEmail(BreachType breachType, const char *recepient)
   std::cout<<"To: "<<recepient<<breachTypeMessage[breachtype];
 }
 
-}
+
