@@ -7,7 +7,7 @@ const char *breachTypeMessage[]={"Temperature is Normal","Temperature is too low
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) 
 {
-  Breachtype breachType=NORMAL;
+  BreachType breachType=NORMAL;
   if(value < lowerLimit) 
   {
     breachType=TOO_LOW;
@@ -57,7 +57,7 @@ void sendToController(BreachType breachType)
 
 void sendToEmail(BreachType breachType, const char *recepient) 
 {
-  std::cout<<"To: "<<recepient<<breachTypeMessage[breachtype];
+  std::cout<<"To: "<<recepient<<breachTypeMessage[breachType];
 }
 
 
