@@ -44,4 +44,4 @@ Think about guiding refactoring-work in your regular/project teams. Think of the
 
 You have seen a few workflows in this repository. They are quality-gates to prevent duplication, control complexity and prove functionality. Do you think some of them have potential to guide code-improvements in your team? Yes
 
-During the next four weeks, what improvement do you plan in your code-quality practice? (in your regular work, not in this repository!) Maintaining the CNN is one very important practise that I will try to inculcate, also the testing will be more appropriate trying to cover all the boundaries. Namin of the functions also has equal importance since readbility of the code is one main point
+During the next four weeks, what improvement do you plan in your code-quality practice? (in your regular work, not in this repository!) Maintaining the CNN and test  covering all the boundaries, rightly naming the functions are some of the improvements that I try to inculcate.
